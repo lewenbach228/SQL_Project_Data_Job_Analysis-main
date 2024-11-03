@@ -1,0 +1,298 @@
+/*
+Question: What are the most company offering job for data scientist?
+*/
+
+SELECT job_country,
+    COUNT(job_location) AS location_count
+FROM job_postings_fact
+WHERE job_title_short = 'Data Scientist'
+    AND salary_year_avg IS NOT NULL
+GROUP BY job_country
+ORDER BY  location_count DESC
+
+/*
+Here's the breakdown of the most company offering job for data scientist in 2023
+United States and Sudan are offering most.
+
+--  [
+--   {
+--     "job_country": "United States",
+--     "location_count": "4502"
+--   },
+--   {
+--     "job_country": "Sudan",
+--     "location_count": "561"
+--   },
+--   {
+--     "job_country": "India",
+--     "location_count": "92"
+--   },
+--   {
+--     "job_country": "United Kingdom",
+--     "location_count": "76"
+--   },
+--   {
+--     "job_country": "France",
+--     "location_count": "57"
+--   },
+--   {
+--     "job_country": "Canada",
+--     "location_count": "53"
+--   },
+--   {
+--     "job_country": "Germany",
+--     "location_count": "41"
+--   },
+--   {
+--     "job_country": "Poland",
+--     "location_count": "31"
+--   },
+--   {
+--     "job_country": "Mexico",
+--     "location_count": "25"
+--   },
+--   {
+--     "job_country": "Israel",
+--     "location_count": "24"
+--   },
+--   {
+--     "job_country": "Singapore",
+--     "location_count": "22"
+--   },
+--   {
+--     "job_country": "Portugal",
+--     "location_count": "22"
+--   },
+--   {
+--     "job_country": "Spain",
+--     "location_count": "20"
+--   },
+--   {
+--     "job_country": "Switzerland",
+--     "location_count": "20"
+--   },
+--   {
+--     "job_country": "South Africa",
+--     "location_count": "20"
+--   },
+--   {
+--     "job_country": "Netherlands",
+--     "location_count": "17"
+--   },
+--   {
+--     "job_country": "Philippines",
+--     "location_count": "14"
+--   },
+--   {
+--     "job_country": "Norway",
+--     "location_count": "13"
+--   },
+--   {
+--     "job_country": "Brazil",
+--     "location_count": "13"
+--   },
+--   {
+--     "job_country": "Hungary",
+--     "location_count": "13"
+--   },
+--   {
+--     "job_country": "Greece",
+--     "location_count": "12"
+--   },
+--   {
+--     "job_country": "Italy",
+--     "location_count": "12"
+--   },
+--   {
+--     "job_country": "Malaysia",
+--     "location_count": "12"
+--   },
+--   {
+--     "job_country": "Belgium",
+--     "location_count": "8"
+--   },
+--   {
+--     "job_country": "Colombia",
+--     "location_count": "8"
+--   },
+--   {
+--     "job_country": "Costa Rica",
+--     "location_count": "8"
+--   },
+--   {
+--     "job_country": "Romania",
+--     "location_count": "7"
+--   },
+--   {
+--     "job_country": "Argentina",
+--     "location_count": "7"
+--   },
+--   {
+--     "job_country": "Australia",
+--     "location_count": "7"
+--   },
+--   {
+--     "job_country": "Sweden",
+--     "location_count": "7"
+--   },
+--   {
+--     "job_country": "Denmark",
+--     "location_count": "7"
+--   },
+--   {
+--     "job_country": "Thailand",
+--     "location_count": "7"
+--   },
+--   {
+--     "job_country": "Vietnam",
+--     "location_count": "6"
+--   },
+--   {
+--     "job_country": "Turkey",
+--     "location_count": "6"
+--   },
+--   {
+--     "job_country": "Ireland",
+--     "location_count": "6"
+--   },
+--   {
+--     "job_country": "South Korea",
+--     "location_count": "6"
+--   },
+--   {
+--     "job_country": "Japan",
+--     "location_count": "6"
+--   },
+--   {
+--     "job_country": "Ukraine",
+--     "location_count": "6"
+--   },
+--   {
+--     "job_country": "Chile",
+--     "location_count": "5"
+--   },
+--   {
+--     "job_country": "Indonesia",
+--     "location_count": "5"
+--   },
+--   {
+--     "job_country": "Estonia",
+--     "location_count": "4"
+--   },
+--   {
+--     "job_country": "Bulgaria",
+--     "location_count": "4"
+--   },
+--   {
+--     "job_country": "Egypt",
+--     "location_count": "4"
+--   },
+--   {
+--     "job_country": "Finland",
+--     "location_count": "4"
+--   },
+--   {
+--     "job_country": "Puerto Rico",
+--     "location_count": "4"
+--   },
+--   {
+--     "job_country": "Slovakia",
+--     "location_count": "4"
+--   },
+--   {
+--     "job_country": "Taiwan",
+--     "location_count": "4"
+--   },
+--   {
+--     "job_country": "Luxembourg",
+--     "location_count": "3"
+--   },
+--   {
+--     "job_country": "Nigeria",
+--     "location_count": "3"
+--   },
+--   {
+--     "job_country": "Pakistan",
+--     "location_count": "3"
+--   },
+--   {
+--     "job_country": "Czechia",
+--     "location_count": "3"
+--   },
+--   {
+--     "job_country": "Hong Kong",
+--     "location_count": "3"
+--   },
+--   {
+--     "job_country": "U.S. Virgin Islands",
+--     "location_count": "3"
+--   },
+--   {
+--     "job_country": "Sri Lanka",
+--     "location_count": "3"
+--   },
+--   {
+--     "job_country": "Russia",
+--     "location_count": "2"
+--   },
+--   {
+--     "job_country": "New Zealand",
+--     "location_count": "2"
+--   },
+--   {
+--     "job_country": "Morocco",
+--     "location_count": "2"
+--   },
+--   {
+--     "job_country": "Lithuania",
+--     "location_count": "2"
+--   },
+--   {
+--     "job_country": "Jordan",
+--     "location_count": "2"
+--   },
+--   {
+--     "job_country": "Zimbabwe",
+--     "location_count": "2"
+--   },
+--   {
+--     "job_country": "Albania",
+--     "location_count": "2"
+--   },
+--   {
+--     "job_country": "Croatia",
+--     "location_count": "2"
+--   },
+--   {
+--     "job_country": "Austria",
+--     "location_count": "2"
+--   },
+--   {
+--     "job_country": "Serbia",
+--     "location_count": "2"
+--   },
+--   {
+--     "job_country": "United Arab Emirates",
+--     "location_count": "1"
+--   },
+--   {
+--     "job_country": "Cyprus",
+--     "location_count": "1"
+--   },
+--   {
+--     "job_country": "Zambia",
+--     "location_count": "1"
+--   },
+--   {
+--     "job_country": "Tunisia",
+--     "location_count": "1"
+--   },
+--   {
+--     "job_country": "Uganda",
+--     "location_count": "1"
+--   },
+--   {
+--     "job_country": "Macedonia (FYROM)",
+--     "location_count": "1"
+--   }
+-- ]
