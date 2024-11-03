@@ -68,17 +68,8 @@ Here's the breakdown of the top Data Scientist jobs in 2023:
 - **Diverse Employers:** Companies like Selby Jennings, Algo Capital Group, and Demandbase are leading the market with competitive salaries, demonstrating strong demand across various sectors.
 - **Job Title Variety:** The positions range from Staff Data Scientist to Head of Data Science, reflecting the diverse career paths and specialization opportunities within data science.
 
-```mermaid
-bar
-    title Top 5 Data Scientist Salaries (in thousands of $)
-    axis x Salary options
-    axis y 0->600
-    bar Staff Data Scientist/Quant 550
-    bar Staff Data Scientist Analytics 525
-    bar Data Scientist 375
-    bar Head of Data Science 351
-    bar Head of Data Science 324
-```
+![Top Paying Skills](assets/salaires_data_scientist.png)
+_Bar graph visualizing the top 10 paying jobs for data scientist; ChatGPT generated this graph from my SQL query results_
 
 ### 2. Skills for Top-Paying Data Scientist Jobs
 
@@ -141,16 +132,14 @@ ORDER BY
     demand_count DESC
 LIMIT 5;
 ```
+| Compétence | Nombre d'occurrences |
+|------------|-----------------------|
+| Python     | 10,390               |
+| SQL        | 7,488                |
+| R          | 4,674                |
+| AWS        | 2,593                |
+| Tableau    | 2,458                |
 
-```mermaid
-pie
-    title "Top 5 Required Skills"
-    "Python" 10390
-    "SQL" 7488
-    "R" 4674
-    "AWS" 2593
-    "Tableau" 2458
-```
 
 ### 4. Geographic Distribution (Top 5 countries)
 
@@ -166,17 +155,14 @@ GROUP BY job_country
 ORDER BY  location_count DESC
 ```
 
-```mermaid
-bar
-    title Number of job offers by country
-    axis x Countries
-    axis y 0->5000
-    bar "United States" 4502
-    bar "Sudan" 561
-    bar "India" 92
-    bar "United Kingdom" 76
-    bar "France" 57
-```
+| Pays            | Nombre d'offres d'emploi |
+|-----------------|--------------------------|
+| États-Unis      | 4,502                    |
+| Soudan          | 561                      |
+| Inde            | 92                       |
+| Royaume-Uni     | 76                       |
+| France          | 57                       |
+
 
 ### 5. Top Company Offering Data Scientist Jobs in 2023
 
@@ -275,15 +261,6 @@ ORDER BY
 | ------------------ | ------------------ |
 | Degree Required    | 136,142.27         |
 | No Degree Required | 126,516.01         |
-
-```mermaid
-bar
-    title Impact of Degree on Salary ($)
-    axis x Type
-    axis y 120000->140000
-    bar "With degree" 136142
-    bar "Without degree" 126516
-```
 
 The analysis indicates that Data Scientist positions requiring a degree offer a higher average salary ($136,142.27) compared to those that do not require a degree ($126,516.01). This suggests that educational requirements may influence compensation for Data Scientist roles
 
