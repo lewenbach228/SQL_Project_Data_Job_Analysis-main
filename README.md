@@ -132,7 +132,7 @@ ORDER BY
     demand_count DESC
 LIMIT 5;
 ```
-| Compétence | Nombre d'occurrences |
+| Skill | Number of occurrences |
 |------------|-----------------------|
 | Python     | 10,390               |
 | SQL        | 7,488                |
@@ -155,13 +155,13 @@ GROUP BY job_country
 ORDER BY  location_count DESC
 ```
 
-| Pays            | Nombre d'offres d'emploi |
-|-----------------|--------------------------|
-| États-Unis      | 4,502                    |
-| Soudan          | 561                      |
-| Inde            | 92                       |
-| Royaume-Uni     | 76                       |
-| France          | 57                       |
+| Country          | Number of job offers |
+|------------------|----------------------|
+| United States     | 4,502                |
+| Sudan             | 561                  |
+| India             | 92                   |
+| United Kingdom    | 76                   |
+| France            | 57                   |
 
 
 ### 5. Top Company Offering Data Scientist Jobs in 2023
